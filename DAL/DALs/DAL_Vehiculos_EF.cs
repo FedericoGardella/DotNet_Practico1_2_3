@@ -1,8 +1,7 @@
 ﻿using DAL.IDALs;
 using DAL.Models;
 using Shared;
-using System.Collections.Generic;
-using System.Linq;
+
 
 namespace DAL
 {
