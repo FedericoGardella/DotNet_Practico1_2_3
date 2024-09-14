@@ -5,7 +5,7 @@ namespace DAL
 {
     public class DBContext : DbContext
     {
-        private string _connectionString = "Server=LAPTOP-HR0OQV62\\SQLEXPRESS;Database=Practico3;User Id=sa;Password=1234; TrustServerCertificate=True";
+        private string _connectionString = "Server=sqlserver,1433;Database=Practico3;User Id=sa;Password=Abc*123!;TrustServerCertificate=True";
 
         public DBContext() { }
 
@@ -23,5 +23,13 @@ namespace DAL
 
         public DbSet<Personas> Personas { get; set; }
         public DbSet<Vehiculos> Vehiculos { get; set; }
+
+        public static void UpdateDatabase()
+        {
+            using (var context = new DBContext())
+            {
+                context.Database.Migrate();
+            }
+        }
     }
 }

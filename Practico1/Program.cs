@@ -151,22 +151,8 @@ do
 while (comando != "EXIT");
 
 
-//DUDAS:
 
-//Preguntarle a Cristian por que carajo esto funciona si no tengo el DAL_Vehiculos_EF.cs
 
-//Estructura de proyectos y carpetas probablemente mal
-
-//Tuve que poner DBContect en public
-
-//No termino de entender si estoy usando Lambda Queries o LINQ o ninguno de los dos
-
-//Desentendimiento general en como se componen las aplicaciones, parece ser un MVC pero no
-
-//Cada vez que me conecto a la BDD me aparece esto: Advertencia de seguridad: el elemento TLS 1.0 negociado es un protocolo inseguro y
-//solo se admite por compatibilidad con versiones anteriores. La versión recomendada del protocolo es TLS 1.2 y versiones posteriores.
-
-//Necesito entender mejor cuando tengo que poner "Personas" en plural y "Persona" en singular
 
 Console.WriteLine("Hasta luego!!!");
 Console.ReadLine();

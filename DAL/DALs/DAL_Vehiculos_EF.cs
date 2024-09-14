@@ -73,7 +73,7 @@ namespace DAL
 
         // Actualizar un vehículo
         public void UpdateVehiculo(Vehiculo vehiculo)
-        {
+        { 
             var vehiculoEntity = _context.Vehiculos.Find(vehiculo.Id);
             if (vehiculoEntity != null)
             {
@@ -85,5 +85,21 @@ namespace DAL
                 _context.SaveChanges();
             }
         }
+
+        public List<Vehiculo> GetVehiculosPorPropietario(long propietarioId)
+        {
+            return _context.Vehiculos
+                .Where(v => v.PersonaId == propietarioId)
+                .Select(v => new Vehiculo
+                {
+                    Id = v.Id,
+                    Marca = v.Marca,
+                    Modelo = v.Modelo,
+                    Matricula = v.Matricula,
+                    PersonaId = v.PersonaId
+                })
+                .ToList();
+        }
+
     }
 }
